@@ -1,0 +1,6 @@
+#plats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+  grid-gap: 1em;
+  margin : 1em 1em;
+}

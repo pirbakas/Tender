@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Register</h1>
+
+  <p *ngIf="isFailed" class="alert alert-danger" role="alert">{{ failedMessage }}</p>
+  <p *ngIf="isSuccess" class="alert alert-success" role="alert">{{ successMessage }}</p>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-4">
+      <label for="nickname">Nickname *</label>
+      <input type="text" formControlName="nickname" class="form-control" id="nickname" placeholder="John Doe">
+    </div>
+    <div class="form-group mb-4">
+      <label for="email">Email *</label>
+      <input type="email" formControlName="email" class="form-control" id="email" placeholder="john.doe@mail.com">
+    </div>
+    <div class="form-group mb-4">
+      <label for="password">Password *</label>
+      <input type="password" formControlName="password" class="form-control" id="password" placeholder="*******">
+    </div>
+    <div class="form-group mb-4">
+      <label for="password_confirmation">Password confirmation *</label>
+      <input type="password" formControlName="password_confirmation" class="form-control" id="password_confirmation" placeholder="*******">
+    </div>
+    <div class="form-group mb-4">
+      <label for="address">Address</label>
+      <input type="text" formControlName="address" class="form-control" id="address" placeholder="101 charm road 2201 New York, Washington">
+    </div>
+    <div class="form-group mb-4">
+      <label for="description">Description</label>
+      <textarea formControlName="description" class="form-control" id="description"></textarea>
+    </div>
+    <div class="form-group mb-4">
+      <label for="picture">Picture (link from your avatar)</label>
+      <input type="text" formControlName="picture" class="form-control" id="picture" placeholder="http://www.gravatar.com/johndoe.jpg">
+    </div>
+    <button type="submit" class="mb-4 btn btn-primary">Register</button>
+  </form>
+</div>

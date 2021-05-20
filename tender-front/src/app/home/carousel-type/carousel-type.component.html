@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <carousel>
+        <div class="carousel-cell" *ngFor="let cell of cells">
+            <img src="{{cell.img}}" (click)="onClick(cell.name)">
+            <p>{{cell.name}}</p>
+        </div>
+      </carousel>
+    </div>
+  </div>
+</div>

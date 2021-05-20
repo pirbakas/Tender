@@ -1,0 +1,56 @@
+<section class="container PlatTemplate">
+  <ng-container *ngIf="plat">
+    <ng-container *ngIf="user">
+      <ng-container *ngIf="cuisine">
+        <div class="row">
+          <p *ngIf="isFailed" class="alert alert-danger" role="alert">{{ failedMessage }}</p>
+          <p *ngIf="isSuccess" class="alert alert-success" role="alert">{{ successMessage }}</p>
+
+          <div [ngClass]="{'PlatTemplateArea':!isBooked,'PlatTemplateAreaGrey':isBooked}">
+            <div class="DateTimeCityArea">
+              <p class="date">{{plat.withdrawal_time}}</p>
+              <p class="city">{{plat.location}}</p>
+            </div>
+
+            <div class="ProposeParDiv">
+              <h5>{{user.nickname}} vous propose : {{plat.title}}</h5>
+            </div>
+
+            <div class="PhotoAndDescritpionArea">
+              <div class="row">
+                <div class="col-lg-6 PhotoDiv">
+                  <div class="card">
+                    <img src="{{cuisine.urlimage}}" class="card-img-top" alt="plat" />
+                  </div>
+                </div>
+                <div class="col-lg-6 PhotoDiv">
+                  <div class="Titre">
+                    <p>{{cuisine.cuisinetitle}}</p>
+                  </div>
+                  <div class="QuantiteDuPlat">
+                    <div *ngIf="!isBooked">
+                      <p>{{plat.portion}} parts</p>
+                    </div>
+                    <div *ngIf="isBooked">
+                      <p>This dish is already book :'(</p>
+                    </div>
+                  </div>
+                  <p class="DescriptionDuPlat">{{plat.description}}</p>
+                  <div *ngIf="!isBooked">
+                    <div class="buttonDiv">
+                      <button (click)="book()" type="button" class="btn btn-primary">RESERVER</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</section>
+
+
+
+

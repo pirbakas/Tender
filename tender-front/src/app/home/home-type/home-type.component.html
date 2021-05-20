@@ -1,0 +1,10 @@
+<app-carousel-type></app-carousel-type>
+<div class="container">
+  <p role="alert">{{ noData }}</p>
+  <div id="plats">
+    <div *ngFor="let plat of platsType" class="plats">
+      <app-plat [plat]="plat"></app-plat>
+    </div>
+  </div>
+</div>
+

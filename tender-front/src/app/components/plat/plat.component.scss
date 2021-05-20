@@ -1,0 +1,86 @@
+.PlatTemplateArea
+{
+  background-color: white;
+  border: solid 1px;
+  border-radius:20px;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  opacity: 90%;
+  width: auto;
+  margin:0.5vw 0vw;
+}
+
+.PlatTemplateAreaGrey
+{
+  background-color: lightgray;
+  border: solid 1px;
+  border-radius:20px;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  opacity: 90%;
+  width: auto;
+  margin:0.5vw 0vw;
+}
+
+.city
+{
+  font-weight: bold;
+}
+
+.DateTimeCityArea
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card
+{
+  text-align: left;
+  background-color: whitesmoke;
+}
+
+.ProposeParDiv
+{
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+
+.TitreEtQuantiteDuPlat
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.QuantiteDuPlat
+{
+  font-weight: bold;
+}
+
+
+.buttonDiv
+{
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+  text-align: right;
+}
+
+.DescriptionDuPlat
+{
+  word-wrap: break-word;
+}
+
+.PlatTemplate
+{
+  display: grid;
+  align-items: stretch;
+}
+
+
